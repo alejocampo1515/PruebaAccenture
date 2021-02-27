@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.pruebasAccenture.app.service;
+
+/**
+ * @author alejocampo
+ *
+ */
+public class CustomerService {
+
+}

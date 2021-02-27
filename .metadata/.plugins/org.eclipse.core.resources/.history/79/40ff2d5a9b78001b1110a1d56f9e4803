@@ -1,0 +1,5 @@
+package com.pruebasAccenture.app.store;
+
+public class CustomerEntity {
+
+}

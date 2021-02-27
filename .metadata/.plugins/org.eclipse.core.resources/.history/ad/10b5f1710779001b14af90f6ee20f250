@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.pruebasAccenture.app.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pruebasAccenture.app.model.CustomerEntity;
+import com.pruebasAccenture.app.repository.CustomersRepository;
+
+/**
+ * @author alejocampo
+ *
+ */
+
+@Service
+public class CustomerService {
+	
+	@Autowired
+	private CustomersRepository customersRepository;
+	
+	public getAllCustomers
+
+}

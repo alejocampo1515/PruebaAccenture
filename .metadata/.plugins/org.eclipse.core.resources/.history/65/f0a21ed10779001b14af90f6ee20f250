@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.pruebasAccenture.app.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pruebasAccenture.app.model.CustomerEntity;
+import com.pruebasAccenture.app.repository.CustomersRepository;
+
+import antlr.collections.List;
+
+/**
+ * @author alejocampo
+ *
+ */
+
+@Service
+public class CustomerService {
+	
+	@Autowired
+	private CustomersRepository customersRepository;
+	
+	public List<CustomerEntity> getAllCustomers(){
+		List<CustomerEntity> result;
+		result = (List<CustomerEntity>) customersRepository.findAll();
+		return result;
+	}
+}

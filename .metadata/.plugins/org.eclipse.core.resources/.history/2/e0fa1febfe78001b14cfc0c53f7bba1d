@@ -1,0 +1,5 @@
+package com.pruebasAccenture.app.repository;
+
+public interface CustomersRepository {
+
+}
