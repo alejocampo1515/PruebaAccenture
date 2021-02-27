@@ -11,3 +11,17 @@ VALUES
 ('Alejandro', 'Ocampo', '12345', 'Carrera 11 # 14 - 08'),
 ('Juan', 'Perez', '24680', 'Calle 21 # 10 - 55'),
 ('Alicia', 'Hernandez', '13579', 'Carrera 12 # 20 - 02');
+
+
+DROP TABLE IF EXISTS TBL_PRODUCTS;
+CREATE TABLE TBL_PRODUCTS(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	reference VARCHAR(250) NOT NULL,
+	price INT NOT NULL,
+	stock INT NOT NULL
+);
+INSERT INTO TBL_PRODUCTS (reference, price, stock)
+VALUES
+('product1', '50000', '30'),
+('product2', '80000', '20'),
+('product3', '20000', '50');
