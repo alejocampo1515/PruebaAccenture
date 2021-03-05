@@ -1,0 +1,5 @@
+package com.pruebasAccenture.app.exception;
+
+public class RecordNotFoundException {
+
+}

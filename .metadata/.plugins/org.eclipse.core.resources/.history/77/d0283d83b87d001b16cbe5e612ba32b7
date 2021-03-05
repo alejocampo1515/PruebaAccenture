@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.pruebasAccenture.app.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.pruebasAccenture.app.model.CustomerEntity;
+import com.pruebasAccenture.app.repository.CustomersRepository;
+
+/**
+ * @author alejocampo
+ *
+ */
+
+@Service
+public class CustomerService {
+
+	@Autowired
+	private CustomersRepository customersRepository;
+
+	public List<CustomerEntity> getAllCustomers() {
+		List<CustomerEntity> result;
+		result = (List<CustomerEntity>) customersRepository.findAll();
+		if (result.size() > 0) {
+			return result;
+		}
+		return new ArrayList<CustomerEntity>();
+	}
+}

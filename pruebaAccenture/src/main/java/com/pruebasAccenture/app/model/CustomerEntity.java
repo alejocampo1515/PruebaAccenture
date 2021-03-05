@@ -9,6 +9,7 @@ import javax.persistence.Table;
 
 /**
  * Entidad de la tabla TBL_CUSTOMERS
+ * 
  * @author alejocampo
  *
  */
@@ -16,86 +17,97 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "TBL_CUSTOMERS")
 public class CustomerEntity {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(name = "first_name")
 	private String firstName;
 
 	@Column(name = "last_name")
 	private String lastName;
-	
+
 	@Column(name = "identification")
 	private String identification;
-	
+
 	@Column(name = "address")
 	private String address;
+
 	/**
 	 * @return the id
 	 */
 	public Long getId() {
 		return id;
 	}
+
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	/**
 	 * @return the firstName
 	 */
 	public String getFirstName() {
 		return firstName;
 	}
+
 	/**
 	 * @param firstName the firstName to set
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	/**
 	 * @return the lastName
 	 */
 	public String getLastName() {
 		return lastName;
 	}
+
 	/**
 	 * @param lastName the lastName to set
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	/**
 	 * @return the identification
 	 */
 	public String getIdentification() {
 		return identification;
 	}
+
 	/**
 	 * @param identification the identification to set
 	 */
 	public void setIdentification(String identification) {
 		this.identification = identification;
 	}
+
 	/**
 	 * @return the address
 	 */
 	public String getAddress() {
 		return address;
 	}
+
 	/**
 	 * @param address the address to set
 	 */
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "id="+id+" firstName="+firstName+ " lastName="+lastName+ " identification="+identification+ " address="+address; 
+		return "id=" + id + " firstName=" + firstName + " lastName=" + lastName + " identification=" + identification
+				+ " address=" + address;
 	}
 
 }

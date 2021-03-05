@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import com.pruebasAccenture.app.model.ProductEntity;
 import com.pruebasAccenture.app.repository.ProductsRepository;
 
-
 /**
  * @author alejocampo
  *
@@ -18,14 +17,14 @@ import com.pruebasAccenture.app.repository.ProductsRepository;
 
 @Service
 public class ProductService {
-	
+
 	@Autowired
 	private ProductsRepository productsRepository;
-	
-	public List<ProductEntity> getAllProducts(){
+
+	public List<ProductEntity> getAllProducts() {
 		List<ProductEntity> result;
 		result = (List<ProductEntity>) productsRepository.findAll();
-		if(result.size() > 0 ) {
+		if (result.size() > 0) {
 			return result;
 		}
 		return new ArrayList<ProductEntity>();

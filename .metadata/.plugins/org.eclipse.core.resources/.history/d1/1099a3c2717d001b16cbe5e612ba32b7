@@ -1,0 +1,31 @@
+package com.pruebasAccenture.app.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.pruebasAccenture.app.model.ProductEntity;
+import com.pruebasAccenture.app.service.ProductService;
+
+
+@Controller
+@RequestMapping("/")
+public class ProductController {
+	
+	@Autowired
+	private ProductService productService;
+	
+	@RequestMapping
+	public String getAllProducts(Model model) {
+		List<ProductEntity> list = productService.getAllProducts();
+		if(list.size()==0) {
+			list = null;
+		}
+		model.addAttribute("products", list);
+		return "list-customers";
+	}
+
+}

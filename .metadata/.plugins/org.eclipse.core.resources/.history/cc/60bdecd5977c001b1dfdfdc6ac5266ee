@@ -1,0 +1,23 @@
+package com.pruebasAccenture.app.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.pruebasAccenture.app.model.CustomerEntity;
+import com.pruebasAccenture.app.service.CustomerService;
+
+@Controller
+@RequestMapping("/")
+public class CustomerController {
+	
+	@Autowired
+	private CustomerService customerService;
+	
+	@RequestMapping
+	public String getAllCustomers() {
+		List<CustomerEntity> list = customerService.getAllCustomers();
+	}
+}
